@@ -56,6 +56,14 @@ class JoinType(Enum):
     right_outer = "RIGHT OUTER"
     full_outer = "FULL OUTER"
     cross = "CROSS"
+    any_left = "ANY LEFT"
+    any_right = "ANY RIGHT"
+    any_outer = "ANY OUTER"
+    any_cross = "ANY CROSS"
+    all_left = "ALL LEFT"
+    all_right = "ALL RIGHT"
+    all_outer = "ALL OUTER"
+    all_cross = "ALL CROSS"
 
 
 class UnionType(Enum):

@@ -933,6 +933,30 @@ class QueryBuilder(Selectable, Term):
     def cross_join(self, item: Union[Table, "QueryBuilder", AliasedQuery]) -> "Joiner":
         return self.join(item, JoinType.cross)
 
+    def any_left_join(self, item: Union[Table, "QueryBuilder", AliasedQuery]) -> "Joiner":
+        return self.join(item, JoinType.any_left)
+
+    def any_left_join(self, item: Union[Table, "QueryBuilder", AliasedQuery]) -> "Joiner":
+        return self.join(item, JoinType.any_left)
+
+    def any_outer_join(self, item: Union[Table, "QueryBuilder", AliasedQuery]) -> "Joiner":
+        return self.join(item, JoinType.any_outer)
+
+    def any_cross_join(self, item: Union[Table, "QueryBuilder", AliasedQuery]) -> "Joiner":
+        return self.join(item, JoinType.any_cross)
+
+    def all_left_join(self, item: Union[Table, "QueryBuilder", AliasedQuery]) -> "Joiner":
+        return self.join(item, JoinType.any_left)
+
+    def all_left_join(self, item: Union[Table, "QueryBuilder", AliasedQuery]) -> "Joiner":
+        return self.join(item, JoinType.any_left)
+
+    def all_outer_join(self, item: Union[Table, "QueryBuilder", AliasedQuery]) -> "Joiner":
+        return self.join(item, JoinType.any_outer)
+
+    def all_cross_join(self, item: Union[Table, "QueryBuilder", AliasedQuery]) -> "Joiner":
+        return self.join(item, JoinType.any_outer)
+
     @builder
     def limit(self, limit: int) -> "QueryBuilder":
         self._limit = limit
